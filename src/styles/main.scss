@@ -1,0 +1,53 @@
+// @use "./helpers/abstracts.scss" as *;
+
+html {
+    // font-size: calc(100vw / 1920 * 10);
+
+    font-size: 10px;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex-grow: 1;
+}
+
+section {
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    // max-width: 124rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 12rem;
+}
+
+h1 {
+    color: var(--custom-color);
+    font-size: 4rem;
+    text-align: center;
+}
