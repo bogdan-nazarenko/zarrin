@@ -31,23 +31,3 @@ section {
     width: 100%;
     // max-width: 124rem;
 }
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-img {
-    margin-bottom: 5rem;
-    width: 100%;
-    max-width: 12rem;
-}
-
-h1 {
-    color: var(--custom-color);
-    font-size: 4rem;
-    text-align: center;
-}
