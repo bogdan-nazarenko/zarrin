@@ -9,7 +9,13 @@ html {
 html,
 body {
     height: 100%;
-    font-family: sans-serif;
+    color: var(--heading-color);
+    font-weight: 700;
+    font-family: var(--font1), sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
 }
 
 .wrapper {
