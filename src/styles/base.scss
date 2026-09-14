@@ -2,18 +2,15 @@
 
 html {
     min-width: 30rem;
+    font-weight: 400;
     font-size: 62.5%;
-    font-family: sans-serif;
+    font-family: var(--raleway-font);
 
-    // font-size: calc(100dvw / 1200 * 10);
+    @media (1200px > width >= $desktop) {
+        font-size: calc(100dvw / 1200 * 10);
+    }
 }
 
-section {
-    overflow: hidden;
-}
-
-h1 {
-    color: var(--custom-color);
-    font-size: 10rem;
-    text-align: center;
+body {
+    font-size: 1.6rem;
 }
