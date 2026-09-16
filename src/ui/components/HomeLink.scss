@@ -1,0 +1,16 @@
+@use "@styles/abstracts" as *;
+
+.home-link {
+    display: block;
+    aspect-ratio: 156 / 44;
+    width: 100%;
+    max-width: 15.6rem;
+
+    @media (width < $desktop) {
+        max-width: 11.1rem;
+    }
+}
+
+.logo {
+    @extend %contain-media;
+}
