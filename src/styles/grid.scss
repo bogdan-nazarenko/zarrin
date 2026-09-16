@@ -1,9 +1,7 @@
 @use "abstracts" as *;
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
     padding: 0 2rem;
-    height: 100dvh;
+    max-width: 127.2rem;
 }
