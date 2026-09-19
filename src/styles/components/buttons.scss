@@ -1,0 +1,88 @@
+@use "../abstracts" as *;
+
+%button-style {
+    transition-duration: var(--duration);
+    transition-property: background-color, color;
+    border: 0.1rem solid var(--highlight-color);
+    border-radius: 0.8rem;
+    padding: 1.5rem 4.7rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+%button-mq {
+    @media (width < $desktop) {
+        border-radius: 0.6rem;
+        padding: 1rem 3.4rem;
+        font-size: 1rem;
+    }
+}
+
+.button {
+    background-color: var(--highlight-color);
+    color: var(--white-color);
+    font-family: var(--roboto-font);
+    @extend %button-style;
+    @extend %button-mq;
+
+    @include hover-active {
+        background-color: var(--white-color);
+        color: var(--highlight-color);
+    }
+
+    @media (width < $desktop) {
+        line-height: 1.6;
+    }
+}
+
+.outlined-button {
+    padding: 0.9rem 2.7rem;
+    color: var(--highlight-color);
+    font-family: var(--roboto-font);
+    @extend %button-style;
+    @extend %button-mq;
+
+    @include hover-active {
+        background-color: var(--highlight-color);
+        color: var(--white-color);
+    }
+
+    @media (width >= $desktop) {
+        line-height: 1.45;
+    }
+
+    @media (width < $desktop) {
+        padding: 0.6rem 2rem;
+    }
+}
+
+.white-button {
+    border: 0.1rem solid var(--white-color);
+    background-color: var(--white-color);
+    @extend %button-style;
+    @extend %button-mq;
+
+    @include hover-active {
+        background-color: var(--highlight-color);
+        color: var(--white-color);
+    }
+
+    @media (width < $desktop) {
+        line-height: 1.6;
+    }
+}
+
+.light-gray-button {
+    --button-bg: #fafafa;
+
+    border: 0.1rem solid var(--button-bg);
+    background-color: var(--button-bg);
+    font-weight: 600;
+    @extend %button-style;
+
+    @include hover-active {
+        background-color: var(--highlight-color);
+        color: var(--white-color);
+    }
+}
