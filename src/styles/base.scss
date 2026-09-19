@@ -19,3 +19,11 @@ body {
         font-size: 1.2rem;
     }
 }
+
+input {
+    text-overflow: ellipsis;
+}
+
+::placeholder {
+    color: var(--light-color);
+}
