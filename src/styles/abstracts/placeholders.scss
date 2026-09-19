@@ -19,7 +19,7 @@
 }
 
 %link {
-    transition: var(--duration);
+    transition: var(--duration) color;
 
     @include hover-active {
         color: var(--highlight-color);
