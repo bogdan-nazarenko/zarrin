@@ -6,10 +6,6 @@
 
 .container {
     margin: 0 auto;
-    padding: 0 2rem;
-    max-width: 127.2rem;
-
-    @media (width < $tablet) {
-        padding: 0 2.4rem;
-    }
+    padding: 0 2.4rem;
+    max-width: 128rem;
 }
