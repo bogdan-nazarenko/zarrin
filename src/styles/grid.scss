@@ -4,6 +4,10 @@
     padding-top: var(--header-height);
 }
 
+.main {
+    flex-grow: 1;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 2.4rem;
