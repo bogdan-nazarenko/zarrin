@@ -1,7 +1,11 @@
-import Section from "@ui/Section";
+import Header from "@ui/layout/Header";
 
 const App = () => {
-    return <Section />;
+    return (
+        <>
+            <Header />
+        </>
+    );
 };
 
 export default App;
