@@ -4,6 +4,7 @@ const App = () => {
     return (
         <>
             <Header />
+            <main className="main"></main>
         </>
     );
 };
