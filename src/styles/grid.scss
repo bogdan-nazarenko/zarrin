@@ -1,7 +1,10 @@
 @use "abstracts" as *;
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
     padding-top: var(--header-height);
+    min-height: inherit;
 }
 
 .main {
