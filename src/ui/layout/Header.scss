@@ -111,7 +111,7 @@
     font-weight: 500;
     @extend %link;
 
-    &[aria-current="true"] {
+    &[aria-current="page"] {
         color: var(--highlight-color);
     }
 

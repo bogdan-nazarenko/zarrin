@@ -173,8 +173,9 @@ const Header = () => {
                                                 className="header__link"
                                                 to={url}
                                                 aria-current={
-                                                    url === pathname ||
-                                                    undefined
+                                                    url === pathname
+                                                        ? "page"
+                                                        : undefined
                                                 }
                                                 onClick={
                                                     isMobile
@@ -251,6 +252,9 @@ const Header = () => {
                             <Link
                                 className="header__contact-link button"
                                 to="/contact"
+                                aria-current={
+                                    pathname === "/contact" ? "page" : undefined
+                                }
                                 onClick={isMobile ? closeMenu : undefined}
                             >
                                 Contact us
