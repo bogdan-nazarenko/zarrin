@@ -221,7 +221,7 @@ const Header = () => {
                                         aria-label="Search"
                                         onInput={(event) => {
                                             setClearButtonVisible(
-                                                event.currentTarget.value
+                                                event.currentTarget.value !== ""
                                             );
                                         }}
                                         ref={fieldRef}
