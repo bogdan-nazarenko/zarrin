@@ -113,8 +113,18 @@ const Header = () => {
         }
     }
 
+    function fieldInputHandler(event) {
+        const isEmpty = event.currentTarget.value === "";
+
+        if (isMobile) setFieldVisible(!isEmpty);
+
+        setClearButtonVisible(!isEmpty);
+    }
+
     function clearField() {
         fieldRef.current.value = "";
+
+        if (isMobile) setFieldVisible(false);
 
         setClearButtonVisible(false);
         fieldRef.current.focus();
@@ -220,11 +230,7 @@ const Header = () => {
                                         name="search"
                                         placeholder="Search"
                                         aria-label="Search"
-                                        onInput={(event) => {
-                                            setClearButtonVisible(
-                                                event.currentTarget.value !== ""
-                                            );
-                                        }}
+                                        onInput={fieldInputHandler}
                                         ref={fieldRef}
                                     />
 
