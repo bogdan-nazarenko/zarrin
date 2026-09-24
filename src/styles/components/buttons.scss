@@ -60,6 +60,7 @@
 .white-button {
     border: 0.1rem solid var(--white-color);
     background-color: var(--white-color);
+    color: var(--heading-color);
     @extend %button-style;
     @extend %button-mq;
 
@@ -78,6 +79,7 @@
 
     border: 0.1rem solid var(--button-bg);
     background-color: var(--button-bg);
+    color: var(--heading-color);
     font-weight: 600;
     @extend %button-style;
 
