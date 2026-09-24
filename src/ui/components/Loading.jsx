@@ -3,21 +3,21 @@ import "./Loading.scss";
 const Loading = () => (
     <svg
         className="loading"
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
+        width="80"
+        height="80"
+        viewBox="0 0 80 80"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
     >
         <g strokeWidth="10">
-            <circle cx="50" cy="50" r="45" />
+            <circle cx="40" cy="40" r="35" />
             <circle
-                cx="50"
-                cy="50"
-                r="45"
-                strokeDasharray="283"
-                strokeDashoffset="71"
+                cx="40"
+                cy="40"
+                r="35"
+                strokeDasharray="220"
+                strokeDashoffset="55"
                 strokeLinecap="round"
             />
         </g>
