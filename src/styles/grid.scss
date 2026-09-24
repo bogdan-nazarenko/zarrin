@@ -14,10 +14,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        @media (width < $desktop) {
-            height: calc(100dvh - var(--header-height));
-        }
+        height: calc(100dvh - var(--header-height));
     }
 }
 
