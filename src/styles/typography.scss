@@ -2,20 +2,54 @@
 
 .xxl-title {
     font-size: 6.4rem;
+    line-height: 1.34;
+
+    @media (width < $desktop) {
+        font-size: 4.6rem;
+    }
+
+    @media (width < $tablet) {
+        font-size: 3.6rem;
+        line-height: 1.12;
+    }
 }
 
 .xl-title {
     font-size: 5.2rem;
+
+    @media (width < $desktop) {
+        font-size: 3.7rem;
+    }
+
+    @media (width < $tablet) {
+        font-size: 2.4rem;
+    }
 }
 
 .lg-title {
     font-size: 4.8rem;
+
+    @media (width < $desktop) {
+        font-size: 3.4rem;
+    }
+
+    @media (width < $tablet) {
+        font-size: 2rem;
+    }
 }
 
 .md-title {
     font-size: 3.2rem;
+
+    @media (width < $tablet) {
+        font-size: 2.3rem;
+    }
 }
 
 .sm-title {
     font-style: 2.4rem;
+
+    @media (width < $tablet) {
+        font-size: 1.7rem;
+    }
 }
