@@ -1,0 +1,143 @@
+@use "@styles/abstracts" as *;
+
+.hero {
+    background-color: var(--highlight-color);
+    padding-block: 12.2rem 9.8rem;
+    color: var(--white-color);
+
+    @media (width < $desktop) {
+        padding-block: 8.8rem 7rem;
+    }
+
+    @media (width < $tablet) {
+        padding-block: 4.1rem 4.2rem;
+    }
+}
+
+.hero__container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media (width >= $desktop) {
+        z-index: 0;
+
+        &::before,
+        &::after {
+            position: absolute;
+            z-index: -1;
+            content: "";
+        }
+
+        &::before {
+            top: -21.6rem;
+            left: -7.8rem;
+            width: 60.1rem;
+            height: 26.6rem;
+            @include background("@media/images/waves-1.svg");
+        }
+
+        &::after {
+            right: -8.2rem;
+            bottom: -23.6rem;
+            width: 50.8rem;
+            height: 37.8rem;
+            @include background("@media/images/waves-2.svg");
+        }
+    }
+
+    @media (width < $tablet) {
+        flex-direction: column;
+        gap: 5.8rem;
+    }
+}
+
+.hero__info {
+    padding-top: 1.5rem;
+    max-width: 58rem;
+
+    @media (width < $desktop) {
+        padding-top: 1rem;
+        max-width: 41.6rem;
+    }
+
+    @media (width < $phablet) {
+        padding-top: 0;
+        max-width: 31rem;
+    }
+}
+
+.hero__superscription {
+    display: block;
+    margin: 0 0 3.7rem 0.3rem;
+    width: fit-content;
+    font-weight: 700;
+    letter-spacing: 10%;
+    text-transform: capitalize;
+
+    @media (width < $desktop) {
+        margin: 0 0 2.7rem 0.2rem;
+        letter-spacing: 7%;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 0.4rem;
+    }
+}
+
+.hero__title {
+    margin-bottom: 2.8rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 2rem;
+    }
+}
+
+.hero__text {
+    margin-bottom: 6.3rem;
+    max-width: 41.6rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 4.5rem;
+        max-width: 32rem;
+        line-height: 1.45;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.hero__link {
+    display: block;
+    width: fit-content;
+    text-transform: none;
+}
+
+.hero__image-wrapper {
+    border-radius: 1.6rem;
+    aspect-ratio: 608 / 576;
+    width: 100%;
+    max-width: 60.8rem;
+    overflow: hidden;
+
+    @media (width < $desktop) {
+        aspect-ratio: 436 / 413;
+        max-width: 43.6rem;
+    }
+
+    @media (width < $tablet) {
+        margin: 0 auto;
+    }
+
+    @media (width < $phablet) {
+        aspect-ratio: 327 / 330;
+        max-width: 32.7rem;
+    }
+}
+
+.hero__image {
+    transform: scale(-1.15, 1.15);
+    @extend %cover-media;
+}
