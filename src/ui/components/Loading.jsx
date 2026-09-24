@@ -18,7 +18,6 @@ const Loading = () => (
                 r="35"
                 strokeDasharray="220"
                 strokeDashoffset="55"
-                strokeLinecap="round"
             />
         </g>
     </svg>

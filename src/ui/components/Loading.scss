@@ -9,7 +9,7 @@
         stroke: rgba(1, 1, 1, 0.2);
     }
 
-    circle[stroke-linecap] {
+    circle:nth-of-type(2) {
         stroke: var(--highlight-color);
     }
 }
