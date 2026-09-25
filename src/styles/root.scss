@@ -1,3 +1,5 @@
+@use "abstracts" as *;
+
 :root {
     --highlight-color: #7c4ee4;
     --heading-color: #333333;
@@ -9,5 +11,11 @@
     --raleway-font: "Raleway", sans-serif;
     --roboto-font: "Roboto", sans-serif;
 
+    --radius: 1.6rem;
+
     --duration: 0.3s;
+
+    @media (width < $desktop) {
+        --radius: 1.1rem;
+    }
 }
