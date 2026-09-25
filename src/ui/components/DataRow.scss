@@ -1,0 +1,29 @@
+@use "@styles/abstracts" as *;
+
+.data-row {
+    width: fit-content;
+    font-size: 1.2rem;
+    font-family: var(--roboto-font);
+
+    @media (width < $desktop) {
+        font-size: 0.9rem;
+    }
+}
+
+.data-row__category {
+    margin-right: 1.1rem;
+    font-weight: 700;
+
+    @media (width < $desktop) {
+        margin-right: 0.6rem;
+    }
+}
+
+.data-row__category_upper {
+    text-transform: uppercase;
+}
+
+.data-row__time {
+    color: var(--light-color);
+    font-weight: 500;
+}
