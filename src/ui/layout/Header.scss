@@ -120,19 +120,6 @@
     }
 }
 
-.header__contact-link {
-    padding: 1.5rem 4.7rem;
-    font-weight: 600;
-    font-size: inherit;
-    font-family: inherit;
-
-    @media (width < $desktop) {
-        padding: 1rem 3.4rem;
-        line-height: 1.7;
-        letter-spacing: 2%;
-    }
-}
-
 .header__search-form {
     display: flex;
     align-items: center;
@@ -241,6 +228,19 @@
 
 .header__search-button_active::before {
     background-color: var(--highlight-color);
+}
+
+.header__contact-link {
+    padding: 1.5rem 4.7rem;
+    font-weight: 600;
+    font-size: inherit;
+    font-family: inherit;
+
+    @media (width < $desktop) {
+        padding: 1rem 3.4rem;
+        line-height: 1.7;
+        letter-spacing: 2%;
+    }
 }
 
 .header__menu-button {
