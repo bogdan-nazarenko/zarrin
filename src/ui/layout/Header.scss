@@ -127,9 +127,9 @@
     font-family: inherit;
 
     @media (width < $desktop) {
-        padding: 0.9rem 3.2rem;
-        font-size: 1.2rem;
+        padding: 1rem 3.4rem;
         line-height: 1.7;
+        letter-spacing: 2%;
     }
 }
 
