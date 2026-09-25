@@ -101,11 +101,11 @@
 .hero__text {
     margin-bottom: 6.3rem;
     max-width: 41.6rem;
+    color: inherit;
 
     @media (width < $desktop) {
         margin-bottom: 4.6rem;
         max-width: 29rem;
-        line-height: 1.54;
     }
 
     @media (width < $tablet) {

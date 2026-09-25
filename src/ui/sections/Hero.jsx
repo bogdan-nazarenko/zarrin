@@ -10,7 +10,7 @@ const Hero = () => {
                     <h1 className="hero__title xxl-title">
                         How AI will Change the Future
                     </h1>
-                    <p className="hero__text">
+                    <p className="hero__text text">
                         The future of AI will see home robots having enhanced
                         intelligence, increased capabilities, and becoming more
                         personal and possibly cute. For example, home robots
