@@ -80,12 +80,10 @@
 .primary-post-preview__title {
     margin-bottom: 1.4rem;
     max-width: 78rem;
-    letter-spacing: -0.1rem;
 
     @media (width < $desktop) {
         margin-bottom: 1rem;
         max-width: 55rem;
-        letter-spacing: -3%;
     }
 
     @media (width < $phablet) {
