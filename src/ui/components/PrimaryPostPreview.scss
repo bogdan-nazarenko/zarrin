@@ -1,0 +1,115 @@
+@use "@styles/abstracts" as *;
+
+.primary-post-preview {
+    padding: 13.1rem 0 4.1rem;
+
+    @media (width < $desktop) {
+        padding: 9.4rem 0 2.9rem;
+    }
+
+    @media (width < $tablet) {
+        padding: 4.2rem 0 3.2rem;
+    }
+}
+
+.primary-post-preview__content {
+    display: flex;
+    flex-direction: column;
+
+    @media (width < $phablet) {
+        border: 0.1rem solid #dbdbdb;
+        border-radius: var(--radius);
+        background-color: var(--white-color);
+        padding: 1.9rem 1.6rem 2.2rem;
+    }
+}
+
+.primary-post-preview__image-wrapper {
+    border-radius: var(--radius);
+    height: 57.6rem;
+    overflow: hidden;
+
+    @media (width < $desktop) {
+        height: 41.5rem;
+    }
+
+    @media (width < $tablet) {
+        height: 36rem;
+    }
+
+    @media (width < $phablet) {
+        margin-bottom: 2.2rem;
+        border-radius: 0.6rem;
+        aspect-ratio: 294 / 200;
+        height: auto;
+    }
+}
+
+.primary-post-preview__image {
+    @extend %cover-media;
+}
+
+.primary-post-preview__info {
+    margin: -24rem 0 0 auto;
+    border-radius: var(--radius);
+    background-color: var(--white-color);
+    padding: 3.2rem 3.2rem 4.2rem;
+    width: 100%;
+    max-width: 92rem;
+
+    @media (width < $desktop) {
+        margin-top: -17.3rem;
+        padding: 2.3rem 2.3rem 3rem;
+        max-width: 66rem;
+    }
+
+    @media (width < $phablet) {
+        margin-top: 0;
+        padding: 0.5rem;
+    }
+}
+
+.primary-post-preview__data-row {
+    margin-bottom: 1.4rem;
+
+    @media ($desktop > width >= $tablet) {
+        margin-bottom: 0.8rem;
+    }
+}
+
+.primary-post-preview__title {
+    margin-bottom: 1.4rem;
+    max-width: 78rem;
+    letter-spacing: -0.1rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 1rem;
+        max-width: 55rem;
+        letter-spacing: -3%;
+    }
+
+    @media (width < $phablet) {
+        margin-bottom: 2rem;
+    }
+}
+
+.primary-post-preview__description {
+    margin-bottom: 3.8rem;
+    max-width: 80rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 2.7rem;
+        max-width: 55rem;
+    }
+
+    @media (width < $phablet) {
+        margin-bottom: 2rem;
+        height: 6.8rem;
+        overflow: hidden;
+    }
+}
+
+.primary-post-preview__link {
+    display: block;
+    width: fit-content;
+}
