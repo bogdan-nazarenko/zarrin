@@ -1,6 +1,7 @@
 @use "abstracts" as *;
 
 html {
+    background-color: var(--page-bg-color);
     min-width: 30rem;
     color: var(--heading-color);
     font-weight: 400;
@@ -13,7 +14,6 @@ html {
 }
 
 body {
-    background-color: var(--page-bg-color);
     font-size: 1.6rem;
 
     @media (width < $desktop) {
