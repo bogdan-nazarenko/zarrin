@@ -1,4 +1,6 @@
 import ai from "@media/images/ai.png";
+import business from "@media/images/business.webp";
+import chocolates from "@media/images/chocolates.webp";
 
 export const images = {
     ai,
@@ -16,8 +18,8 @@ export const postCovers = {
         "https://images.unsplash.com/photo-1548354797-6b1c0d36b3af?q=80&w=714&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     singing:
         "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    business: "@media/images/business.webp",
-    chocolates: "@media/images/chocolates.webp",
+    business,
+    chocolates,
     veligandu:
         "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=775&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     computer:
