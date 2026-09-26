@@ -41,10 +41,12 @@
 .md-title {
     font-size: 3.2rem;
     line-height: 1.41;
+    letter-spacing: -0.1rem;
 
     @media (width < $desktop) {
         font-size: 2.3rem;
         line-height: 1.45;
+        letter-spacing: -3%;
     }
 
     @media (width < $tablet) {
