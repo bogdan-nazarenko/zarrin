@@ -142,6 +142,5 @@
 }
 
 .hero__image {
-    transform: scale(-1.15, 1.15);
     @extend %cover-media;
 }
