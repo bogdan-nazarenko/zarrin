@@ -1,0 +1,86 @@
+@use "@styles/abstracts" as *;
+
+.secondary-post-preview {
+    padding: 2rem 0;
+}
+
+.secondary-post-preview__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media (width < $tablet) {
+        flex-direction: column;
+    }
+}
+
+.secondary-post-preview__image-wrapper {
+    border-radius: var(--radius);
+    aspect-ratio: 712 / 456;
+    width: 100%;
+    max-width: 71.2rem;
+    overflow: hidden;
+
+    @media (width < $desktop) {
+        max-width: 51.1rem;
+    }
+
+    @media (width < $tablet) {
+        aspect-ratio: 300 / 150;
+        max-width: 100%;
+    }
+}
+
+.secondary-post-preview__image {
+    @extend %cover-media;
+}
+
+.secondary-post-preview__info {
+    padding-top: 1.6rem;
+    max-width: 46.3rem;
+
+    @media (width < $desktop) {
+        padding-top: 1.2rem;
+        max-width: 33.3rem;
+    }
+
+    @media (width < $tablet) {
+        max-width: 100%;
+    }
+}
+
+.secondary-post-preview__data-row {
+    margin-bottom: 1.6rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 1rem;
+    }
+}
+
+.secondary-post-preview__title {
+    margin-bottom: 1.7rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 1.3rem;
+        line-height: 1.42;
+    }
+}
+
+.secondary-post-preview__description {
+    margin-bottom: 6.1rem;
+    word-spacing: -14%;
+
+    @media (width < $desktop) {
+        margin-bottom: 4.4rem;
+        word-spacing: 2%;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 2rem;
+    }
+}
+
+.secondary-post-preview__link {
+    display: block;
+    width: fit-content;
+}
