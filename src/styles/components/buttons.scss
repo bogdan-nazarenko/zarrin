@@ -75,8 +75,8 @@
 }
 
 .light-gray-button {
-    border: 0.1rem solid var(--page-bg-color);
-    background-color: var(--page-bg-color);
+    border: 0.1rem solid var(--almost-white-color);
+    background-color: var(--almost-white-color);
     color: var(--heading-color);
     font-weight: 600;
     @extend %button-style;
