@@ -94,16 +94,19 @@
 .primary-post-preview__description {
     margin-bottom: 3.8rem;
     max-width: 80rem;
+    word-spacing: -9%;
 
     @media (width < $desktop) {
         margin-bottom: 2.7rem;
         max-width: 55rem;
+        word-spacing: 1%;
     }
 
     @media (width < $phablet) {
         margin-bottom: 2rem;
         height: 6.8rem;
         overflow: hidden;
+        word-spacing: 2%;
     }
 }
 
