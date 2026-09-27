@@ -1,5 +1,12 @@
 @use "abstracts" as *;
 
+.base-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
 .xxl-title {
     font-size: 6.4rem;
     line-height: 1.35;
