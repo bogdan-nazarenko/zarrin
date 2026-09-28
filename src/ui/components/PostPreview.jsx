@@ -9,7 +9,7 @@ const PostPreview = ({
     TitleTag = "h2",
     title,
     description,
-    url,
+    id,
 }) => {
     return (
         <article className="post-preview">
@@ -37,9 +37,9 @@ const PostPreview = ({
 
             <a
                 className="post-preview__link"
-                href={url}
+                href={`/blog/posts/${id}`}
                 onClick={
-                    url === "#" ? (event) => event.preventDefault() : undefined
+                    id === "#" ? (event) => event.preventDefault() : undefined
                 }
             >
                 Read more...
