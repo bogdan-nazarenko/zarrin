@@ -67,7 +67,11 @@
 
     @media (width < $desktop) {
         font-size: 1.7rem;
-        word-spacing: 2%;
+        word-spacing: -2%;
+    }
+
+    @media (width < $tablet) {
+        word-spacing: 3%;
     }
 }
 
