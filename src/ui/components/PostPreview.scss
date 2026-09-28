@@ -1,0 +1,81 @@
+@use "@styles/abstracts" as *;
+
+.post-preview {
+    width: 100%;
+    max-width: 40rem;
+
+    @media (width < $tablet) {
+        margin: 0 auto;
+    }
+
+    @media (width < $phablet) {
+        max-width: 28.7rem;
+    }
+}
+
+.post-preview__image-wrapper {
+    margin-bottom: 4rem;
+    border-radius: var(--radius);
+    background-color: var(--pale-cyan-color);
+    aspect-ratio: 400 / 360;
+    overflow: hidden;
+
+    @media (width < $desktop) {
+        margin-bottom: 2.9rem;
+    }
+}
+
+.post-preview__image {
+    @extend %cover-media;
+}
+
+.post-preview__data-row {
+    margin-bottom: 1.6rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 0.9rem;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 1.2rem;
+    }
+}
+
+.post-preview__title {
+    margin-bottom: 1.4rem;
+    font-variant-numeric: lining-nums;
+
+    @media (width < $desktop) {
+        margin-bottom: 1rem;
+    }
+}
+
+.post-preview__description {
+    margin-bottom: 1.6rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 1rem;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 1.4rem;
+    }
+}
+
+.post-preview__link {
+    color: var(--highlight-color);
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-family: var(--roboto-font);
+    text-decoration: underline;
+    text-transform: capitalize;
+
+    @media (width < $desktop) {
+        font-size: 1.3rem;
+        letter-spacing: -1%;
+    }
+
+    @media (width < $tablet) {
+        letter-spacing: 0;
+    }
+}
