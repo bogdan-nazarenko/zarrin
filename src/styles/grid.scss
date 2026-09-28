@@ -31,3 +31,18 @@
     padding: 0 2.4rem;
     max-width: 128rem;
 }
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5.3rem 1.6rem;
+
+    @media (width < $desktop) {
+        gap: 3.6rem 1.1rem;
+    }
+
+    @media (width < $tablet) {
+        grid-template-columns: none;
+        gap: 4.4rem;
+    }
+}
