@@ -73,8 +73,10 @@
 
 .text {
     color: var(--text-color);
+    font-family: var(--roboto-font);
 
     @media (width < $desktop) {
         line-height: 1.54;
+        word-spacing: 12%;
     }
 }
