@@ -70,6 +70,10 @@
     text-decoration: underline;
     text-transform: capitalize;
 
+    &:active {
+        color: var(--text-color);
+    }
+
     @media (width < $desktop) {
         font-size: 1.3rem;
         letter-spacing: -1%;
