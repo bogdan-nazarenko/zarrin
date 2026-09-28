@@ -69,11 +69,9 @@
 
 .secondary-post-preview__description {
     margin-bottom: 6.1rem;
-    word-spacing: -14%;
 
     @media (width < $desktop) {
         margin-bottom: 4.4rem;
-        word-spacing: 2%;
     }
 
     @media (width < $tablet) {
