@@ -43,6 +43,19 @@
     @media (width < $tablet) {
         font-size: 2rem;
     }
+
+    .base-header & {
+        letter-spacing: -2%;
+        text-transform: capitalize;
+
+        @media (width < $desktop) {
+            letter-spacing: -1%;
+        }
+
+        @media (width < $tablet) {
+            letter-spacing: -3%;
+        }
+    }
 }
 
 .md-title {
