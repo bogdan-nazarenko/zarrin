@@ -1,14 +1,14 @@
 @use "@styles/abstracts" as *;
 
 .popular-post {
-    padding: 4.8rem 0 9.5rem;
+    padding: 4.8rem 0 19.2rem;
 
     @media (width < $desktop) {
-        padding: 4rem 0 6.8rem;
+        padding: 3.9rem 0 14.7rem;
     }
 
     @media (width < $tablet) {
-        padding: 2.7rem 0 4.8rem;
+        padding: 2.7rem 0 9.5rem;
     }
 }
 
