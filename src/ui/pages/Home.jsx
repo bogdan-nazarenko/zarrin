@@ -1,6 +1,7 @@
 import { images } from "@data/images";
 import Hero from "@ui/sections/Hero";
 import PrimaryPostPreview from "@ui/components/PrimaryPostPreview";
+import RecentPost from "@ui/sections/RecentPost";
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
                 description="Google has been investing in AI for many years and bringing its benefits to individuals, businesses and communities. Whether it’s publishing state-of-the-art research, building helpful products or developing tools and resources that enable others, we’re committed to making AI accessible to everyone."
                 id="9fbae563"
             />
+            <RecentPost />
         </>
     );
 };

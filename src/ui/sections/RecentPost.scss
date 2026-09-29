@@ -1,0 +1,33 @@
+@use "@styles/abstracts" as *;
+
+.recent-post {
+    padding: 3.6rem 0 4.9rem;
+
+    @media (width < $desktop) {
+        padding: 2.7rem 0 3.5rem;
+    }
+
+    @media (width < $tablet) {
+        padding: 3.1rem 0 2.9rem;
+    }
+}
+
+.recent-post__header {
+    margin-bottom: 5.1rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 3.2rem;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 3.7rem;
+    }
+}
+
+.recent-post__secondary-post-preview {
+    margin-bottom: 4.3rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 2.5rem;
+    }
+}
