@@ -1,0 +1,25 @@
+@use "@styles/abstracts" as *;
+
+.popular-post {
+    padding: 4.8rem 0 9.5rem;
+
+    @media (width < $desktop) {
+        padding: 4rem 0 6.8rem;
+    }
+
+    @media (width < $tablet) {
+        padding: 2.7rem 0 4.8rem;
+    }
+}
+
+.popular-post__header {
+    margin-bottom: 5.2rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 3.7rem;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 4.5rem;
+    }
+}

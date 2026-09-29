@@ -2,6 +2,7 @@ import { images } from "@data/images";
 import Hero from "@ui/sections/Hero";
 import PrimaryPostPreview from "@ui/components/PrimaryPostPreview";
 import RecentPost from "@ui/sections/RecentPost";
+import PopularPost from "@ui/sections/PopularPost";
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
                 id="9fbae563"
             />
             <RecentPost />
+            <PopularPost />
         </>
     );
 };
