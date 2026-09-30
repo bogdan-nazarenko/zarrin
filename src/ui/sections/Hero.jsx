@@ -1,4 +1,4 @@
-import { images } from "@data/images";
+import { postCovers } from "@data/images";
 import "./Hero.scss";
 
 const Hero = () => {
@@ -25,7 +25,7 @@ const Hero = () => {
                     </a>
                 </div>
                 <div className="hero__image-wrapper">
-                    <img className="hero__image" src={images.ai} alt="" />
+                    <img className="hero__image" src={postCovers.ai} alt="" />
                 </div>
             </div>
         </section>
