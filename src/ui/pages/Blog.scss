@@ -27,19 +27,14 @@
 .blog__title {
     margin: 0 auto 2rem;
     max-width: 64rem;
-    text-align: center;
 
     @media (width < $desktop) {
         margin-bottom: 1.4rem;
-        word-spacing: -2%;
     }
 
     @media (width < $tablet) {
         margin-bottom: 2.2rem;
         max-width: 19.5rem;
-        font-size: 2.4rem;
-        line-height: 1.25;
-        word-spacing: 0;
     }
 }
 
