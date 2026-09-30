@@ -10,7 +10,7 @@ const Blog = () => {
                     Our blogs
                 </span>
 
-                <h1 className="blog__title lg-title">
+                <h1 className="blog__title lg-title lg-title_centered">
                     Find our all blogs from here
                 </h1>
 
