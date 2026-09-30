@@ -1,14 +1,11 @@
 import { Link } from "react-router";
 import useMediaQuery from "@utils/responsive";
 import { images } from "@data/images";
-import { postPreviewData } from "@data/posts";
 import SecondaryPostPreview from "@ui/components/SecondaryPostPreview";
 import PostPreview from "@ui/components/PostPreview";
 import "./RecentPost.scss";
 
-const postPreviews = postPreviewData.slice(6);
-
-const RecentPost = () => {
+const RecentPost = ({ secondaryPreview, previews }) => {
     const isMobile = useMediaQuery("width < 768px");
 
     return (
@@ -25,18 +22,18 @@ const RecentPost = () => {
                 {!isMobile && (
                     <SecondaryPostPreview
                         className="recent-post__secondary-post-preview"
-                        image={images.vr1}
-                        category="Development"
-                        dateTime="2023-03-16"
-                        time="16 March 2023"
-                        title="How to make a Game look more attractive with New VR & AI Technology"
-                        description="Google has been investing in AI for many years and bringing its benefits to individuals, businesses and communities. Whether it’s publishing state-of-the-art research, building helpful products or developing tools and resources that enable others, we’re committed to making AI accessible to everyone."
-                        id="9fbae563"
+                        image={secondaryPreview.image}
+                        category={secondaryPreview.category}
+                        dateTime={secondaryPreview.dateTime}
+                        time={secondaryPreview.time}
+                        title={secondaryPreview.title}
+                        description={secondaryPreview.description}
+                        id={secondaryPreview.id}
                     />
                 )}
 
                 <div className="catalog">
-                    {postPreviews.map((preview) => {
+                    {previews.map((preview) => {
                         const {
                             image,
                             category,
