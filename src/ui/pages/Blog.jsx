@@ -19,7 +19,7 @@ const Blog = () => {
                 </p>
 
                 <div className="blog__catalog catalog">
-                    {postPreviewData.map((preview) => {
+                    {postPreviewData.slice(1).map((preview) => {
                         const {
                             image,
                             category,
