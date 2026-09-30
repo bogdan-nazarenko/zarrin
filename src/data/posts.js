@@ -16,7 +16,7 @@ export const postPreviewData = [
         category: "Travel",
         dateTime: "2023-03-13",
         time: "13 March 2023",
-        title: "Train Or Bus Journey?Which one suits?",
+        title: "Train Or Bus Journey? Which one suits?",
         description:
             "The choice between a train or bus journey depends on various factors such as the distance of the journey, the time available, the cost, and person",
         id: "#",
