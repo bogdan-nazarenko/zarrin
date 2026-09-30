@@ -4,7 +4,7 @@ import "./PopularPost.scss";
 
 const PopularPost = ({ previews }) => {
     return (
-        <section className="section popular-post">
+        <section className="popular-post section">
             <div className="container">
                 <header className="popular-post__header base-header">
                     <h2 className="lg-title">Popular post</h2>
