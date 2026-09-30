@@ -7,6 +7,20 @@
     gap: 2rem;
 }
 
+.superscription {
+    display: block;
+    width: fit-content;
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: 10%;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (width < $desktop) {
+        letter-spacing: 11%;
+    }
+}
+
 .xxl-title {
     font-size: 6.4rem;
     line-height: 1.35;
