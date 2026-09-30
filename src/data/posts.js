@@ -2,6 +2,16 @@ import { postCovers } from "./images";
 
 export const postPreviewData = [
     {
+        image: postCovers.vr,
+        category: "Development",
+        dateTime: "2023-03-16",
+        time: "16 March 2023",
+        title: "How to make a Game look more attractive with New VR & AI Technology",
+        description:
+            "Google has been investing in AI for many years and bringing its benefits to individuals, businesses and communities. Whether it’s publishing state-of-the-art research, building helpful products or developing tools and resources that enable others, we’re committed to making AI accessible to everyone.",
+        id: "9fbae563",
+    },
+    {
         image: postCovers.train,
         category: "Travel",
         dateTime: "2023-03-13",
