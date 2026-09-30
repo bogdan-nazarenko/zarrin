@@ -6,7 +6,9 @@ const Blog = () => {
     return (
         <section className="blog section">
             <div className="container">
-                <span className="blog__superscription">Our blogs</span>
+                <span className="blog__superscription superscription">
+                    Our blogs
+                </span>
 
                 <h1 className="blog__title lg-title">
                     Find our all blogs from here
