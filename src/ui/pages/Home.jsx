@@ -1,24 +1,31 @@
-import { images } from "@data/images";
+import { postPreviewData } from "@data/posts";
 import Hero from "@ui/sections/Hero";
 import PrimaryPostPreview from "@ui/components/PrimaryPostPreview";
 import RecentPost from "@ui/sections/RecentPost";
 import PopularPost from "@ui/sections/PopularPost";
+
+const postPreview = postPreviewData.find((preview) => {
+    return preview.id === "9fbae563";
+});
 
 const Home = () => {
     return (
         <>
             <Hero />
             <PrimaryPostPreview
-                image={images.vr1}
-                category="Development"
-                dateTime="2023-03-16"
-                time="16 March 2023"
-                title="How to make a Game look more attractive with New VR & AI Technology"
-                description="Google has been investing in AI for many years and bringing its benefits to individuals, businesses and communities. Whether it’s publishing state-of-the-art research, building helpful products or developing tools and resources that enable others, we’re committed to making AI accessible to everyone."
-                id="9fbae563"
+                image={postPreview.image}
+                category={postPreview.category}
+                dateTime={postPreview.dateTime}
+                time={postPreview.time}
+                title={postPreview.title}
+                description={postPreview.description}
+                id={postPreview.id}
             />
-            <RecentPost />
-            <PopularPost />
+            <RecentPost
+                secondaryPreview={postPreview}
+                previews={postPreviewData.slice(7)}
+            />
+            <PopularPost previews={postPreviewData.slice(1, 7)} />
         </>
     );
 };
