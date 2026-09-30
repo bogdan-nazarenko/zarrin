@@ -1,11 +1,8 @@
 import { Link } from "react-router";
-import { postPreviewData } from "@data/posts";
 import PostPreview from "@ui/components/PostPreview";
 import "./PopularPost.scss";
 
-const postPreviews = postPreviewData.slice(0, 6);
-
-const PopularPost = () => {
+const PopularPost = ({ previews }) => {
     return (
         <section className="section popular-post">
             <div className="container">
@@ -18,7 +15,7 @@ const PopularPost = () => {
                 </header>
 
                 <div className="catalog">
-                    {postPreviews.map((preview) => {
+                    {previews.map((preview) => {
                         const {
                             image,
                             category,
