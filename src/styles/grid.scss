@@ -23,7 +23,12 @@
 }
 
 .section {
+    padding: 8.6rem 0 8.3rem;
     overflow: hidden;
+
+    @media (width < $desktop) {
+        padding: 5.1rem 0;
+    }
 }
 
 .container {
