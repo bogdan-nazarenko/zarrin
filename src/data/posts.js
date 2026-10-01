@@ -1,4 +1,12 @@
 import { postCovers } from "./images";
+import Post9fbae563 from "@ui/sections/Post9fbae563";
+
+export const postData = {
+    "9fbae563": {
+        id: "9fbae563",
+        content: Post9fbae563,
+    },
+};
 
 export const postPreviewData = [
     {
