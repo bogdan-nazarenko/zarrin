@@ -7,6 +7,24 @@
     gap: 2rem;
 }
 
+.post-header {
+    display: flex;
+    flex-direction: column;
+    gap: 3.3rem;
+    margin: 0 auto 5.4rem;
+    max-width: 102.3rem;
+
+    @media (width < $desktop) {
+        gap: 2.7rem;
+        margin-bottom: 4.7rem;
+    }
+
+    @media (width < $tablet) {
+        gap: 1.8rem;
+        margin-bottom: 3.3rem;
+    }
+}
+
 .superscription {
     display: block;
     width: fit-content;
