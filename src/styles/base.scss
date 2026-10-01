@@ -54,6 +54,14 @@ blockquote p {
         padding-inline: 0.7rem;
         line-height: 1.68;
     }
+
+    &::before {
+        content: "“";
+    }
+
+    &::after {
+        content: "”";
+    }
 }
 
 cite {
