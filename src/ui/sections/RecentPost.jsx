@@ -50,7 +50,7 @@ const RecentPost = ({ secondaryPreview, previews }) => {
                                 category={category}
                                 dateTime={dateTime}
                                 time={time}
-                                TitleTag="h4"
+                                TitleTag={isMobile ? "h3" : "h4"}
                                 title={title}
                                 description={description}
                                 id={id}
