@@ -31,6 +31,10 @@ h6 {
     font-variant-numeric: lining-nums;
 }
 
+p a {
+    text-decoration: underline;
+}
+
 blockquote p {
     margin-bottom: 0.8rem;
     border-left: 0.5rem solid var(--highlight-color);
