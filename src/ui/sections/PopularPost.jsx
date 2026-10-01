@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import PostPreview from "@ui/components/PostPreview";
 import "./PopularPost.scss";
 
-const PopularPost = ({ previews }) => {
+const PopularPost = ({ previews, previewTitleTag = "h3" }) => {
     return (
         <section className="popular-post section">
             <div className="container">
@@ -32,7 +32,7 @@ const PopularPost = ({ previews }) => {
                                 category={category}
                                 dateTime={dateTime}
                                 time={time}
-                                TitleTag="h4"
+                                TitleTag={previewTitleTag}
                                 title={title}
                                 description={description}
                                 id={id}
