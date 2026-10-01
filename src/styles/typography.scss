@@ -94,6 +94,26 @@
             letter-spacing: -3%;
         }
     }
+
+    .post-header & {
+        line-height: 1.35;
+
+        @media (width < $desktop) {
+            font-size: 4rem;
+            word-spacing: 3%;
+        }
+
+        @media (width < $tablet) {
+            font-size: 3rem;
+        }
+
+        @media (width < $phablet) {
+            max-width: 25rem;
+            font-size: 2.4rem;
+            line-height: 1.38;
+            word-spacing: 0;
+        }
+    }
 }
 
 .lg-title_centered {
