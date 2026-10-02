@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import useMediaQuery from "@utils/responsive";
-import { images } from "@data/images";
 import SecondaryPostPreview from "@ui/components/SecondaryPostPreview";
 import PostPreview from "@ui/components/PostPreview";
 import "./RecentPost.scss";
