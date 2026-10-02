@@ -1,0 +1,73 @@
+@use "@styles/abstracts" as *;
+
+.error {
+    padding: 11.6rem 0 15.1rem;
+
+    @media (width < $desktop) {
+        padding: 10.3rem 0 9.8rem;
+    }
+
+    @media (width < $tablet) {
+        padding: 6.2rem 0 6.4rem;
+    }
+}
+
+.error__content {
+    margin: 0 auto;
+    border-radius: 1.6rem;
+    background-color: var(--highlight-color);
+    padding: 6.3rem 2rem 5.5rem;
+    max-width: 81.6rem;
+    color: var(--white-color);
+    text-align: center;
+
+    @media (width >= $tablet) {
+        @include background(
+            "@media/images/waves-5.svg",
+            47% -16.9rem,
+            134rem 34.7rem
+        );
+    }
+
+    @media (width < $tablet) {
+        padding-block: 3.9rem 4.6rem;
+    }
+}
+
+.error__link {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.error__title {
+    margin-bottom: 3.8rem;
+    font-size: 15.3rem;
+    line-height: 1;
+    letter-spacing: 0.2rem;
+
+    @media (width < $tablet) {
+        margin-bottom: 1.6rem;
+        font-size: 14.8rem;
+        letter-spacing: 0;
+    }
+
+    @media (width < $mobile) {
+        font-size: 12rem;
+    }
+}
+
+.error__description {
+    margin-bottom: 3.6rem;
+    font-size: 2.4rem;
+
+    @media (width < $tablet) {
+        margin-bottom: 3.9rem;
+        font-size: 2rem;
+        line-height: 1.25;
+    }
+}
+
+.error__link {
+    padding: 1.6rem 5.2rem;
+}
