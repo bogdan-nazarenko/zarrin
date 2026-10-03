@@ -1,5 +1,11 @@
+import Overview from "@ui/sections/Overview";
+
 const About = () => {
-    return <></>;
+    return (
+        <>
+            <Overview />
+        </>
+    );
 };
 
 export default About;

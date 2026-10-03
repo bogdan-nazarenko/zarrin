@@ -1,0 +1,70 @@
+@use "@styles/abstracts" as *;
+
+.overview {
+    padding: 7.7rem 0 5rem;
+
+    @media (width < $desktop) {
+        padding: 7.5rem 0 3.5rem;
+    }
+
+    @media (width < $tablet) {
+        padding: 6.3rem 0 3rem;
+    }
+}
+
+.overview__superscription {
+    margin: 0 auto 2.5rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 1.6rem;
+    }
+}
+
+.overview__title {
+    margin: 0 auto 2.3rem;
+    max-width: 61rem;
+    line-height: 1.33;
+
+    @media (width < $desktop) {
+        margin-bottom: 1.8rem;
+        max-width: 44rem;
+        line-height: 1.36;
+        letter-spacing: 1%;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 2.4rem;
+        line-height: 1.4;
+        letter-spacing: 0;
+    }
+}
+
+.overview__text {
+    margin: 0 auto 12.7rem;
+    max-width: 100rem;
+    text-align: center;
+
+    @media (width < $desktop) {
+        margin-bottom: 9rem;
+        max-width: 71rem;
+        word-spacing: 13%;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 6.2rem;
+    }
+}
+
+.overview__image-wrapper {
+    border-radius: var(--radius);
+    aspect-ratio: 1232 / 608;
+    overflow: hidden;
+
+    @media (width < $tablet) {
+        aspect-ratio: 327 / 198;
+    }
+}
+
+.overview__image {
+    @extend %cover-media;
+}
