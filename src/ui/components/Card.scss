@@ -1,0 +1,126 @@
+@use "@styles/abstracts" as *;
+
+.card {
+    --title-color: var(--highlight-color);
+
+    border-radius: var(--radius);
+    padding: 1.8rem 2.4rem 6.4rem;
+    width: 100%;
+    max-width: 40rem;
+    color: var(--text-color);
+
+    @media (width < $desktop) {
+        padding: 1.3rem 1.7rem 4.6rem;
+        max-width: 28.6rem;
+    }
+
+    @media ($tablet > width >= $phablet) {
+        padding-bottom: 6.3rem;
+        max-width: 100%;
+    }
+
+    &:has(> .card__link) {
+        padding-bottom: 2.8rem;
+
+        @media (width < $desktop) {
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+.card_highlighted {
+    --title-color: var(--white-color);
+
+    background-color: var(--highlight-color);
+    color: var(--white-color);
+}
+
+.card__number {
+    display: block;
+    opacity: 0.1;
+    margin-bottom: 0.2rem;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 7.2rem;
+    font-variant-numeric: lining-nums;
+
+    @media (width < $desktop) {
+        font-size: 5.1rem;
+    }
+
+    .card_highlighted & {
+        opacity: 1;
+    }
+}
+
+.card__title {
+    margin-bottom: 1.6rem;
+    color: var(--title-color);
+    text-transform: capitalize;
+
+    @media (width < $desktop) {
+        margin-bottom: 1.2rem;
+        letter-spacing: 1%;
+    }
+
+    @media (width < $tablet) {
+        letter-spacing: 0;
+    }
+}
+
+.card__description {
+    opacity: 70%;
+    color: inherit;
+
+    @media (width < $desktop) {
+        line-height: 1.55;
+    }
+
+    &:has(+ .card__link) {
+        margin-bottom: 3.2rem;
+
+        @media (width < $desktop) {
+            margin-bottom: 2.4rem;
+        }
+    }
+}
+
+.card__link {
+    display: block;
+    outline-color: currentColor;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-family: var(--roboto-font);
+    text-transform: capitalize;
+
+    @media (width < $desktop) {
+        font-size: 1rem;
+    }
+
+    &::after {
+        display: block;
+        transform: scaleX(0);
+        transition: var(--duration);
+        margin-top: 0.3rem;
+        background-color: currentColor;
+        height: 0.4rem;
+        content: "";
+
+        @media (width < $desktop) {
+            margin-top: 0.1rem;
+            height: 0.3rem;
+        }
+    }
+
+    @media (hover: hover) {
+        .card:hover &::after {
+            transform: scaleX(1);
+        }
+    }
+
+    &:active::after,
+    &:focus-visible::after {
+        transform: scaleX(1);
+    }
+}
