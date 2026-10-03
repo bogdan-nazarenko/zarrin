@@ -5,6 +5,7 @@ import Loading from "@ui/components/Loading";
 const Home = lazy(() => import("@ui/pages/Home"));
 const Blog = lazy(() => import("@ui/pages/Blog"));
 const Posts = lazy(() => import("@ui/pages/Posts"));
+const About = lazy(() => import("@ui/pages/About"));
 const Error = lazy(() => import("@ui/pages/Error"));
 import Newsletter from "@ui/sections/Newsletter";
 import Footer from "@ui/layout/Footer";
@@ -21,6 +22,7 @@ const App = () => {
                             <Route index element={<Blog />} />
                             <Route path="posts/:id" element={<Posts />} />
                         </Route>
+                        <Route path="/about" element={<About />} />
                         <Route path="*" element={<Error />} />
                     </Routes>
 
