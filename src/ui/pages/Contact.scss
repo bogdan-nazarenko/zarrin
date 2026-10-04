@@ -1,0 +1,271 @@
+@use "@styles/abstracts" as *;
+
+.contact {
+    padding: 10.5rem 0 12.2rem;
+
+    @media (width < $desktop) {
+        padding: 6.3rem 0;
+    }
+
+    @media (width < $tablet) {
+        padding: 2.8rem 0;
+    }
+}
+
+.contact__title {
+    margin-bottom: 1.2rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 0.9rem;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 1.9rem;
+    }
+}
+
+.contact__text {
+    margin: 0 auto 5.6rem;
+    max-width: 44rem;
+    color: var(--light-color);
+    font-family: var(--raleway-font);
+    text-align: center;
+
+    @media (width < $desktop) {
+        margin-bottom: 3.8rem;
+        max-width: 32rem;
+        word-spacing: 3%;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 4.4rem;
+        max-width: 27rem;
+        word-spacing: 4%;
+    }
+}
+
+.contact__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.1rem;
+    margin-bottom: 11.7rem;
+    text-align: center;
+
+    @media (width < $desktop) {
+        gap: 1.5rem;
+        margin-bottom: 8.2rem;
+    }
+
+    @media (width < $tablet) {
+        gap: 3rem;
+        margin-bottom: 7.2rem;
+    }
+}
+
+.contact__list-item {
+    box-shadow: 0.3rem 0.1rem 4.3rem 0 #7c4ee40a;
+    border-radius: var(--radius);
+    background-color: var(--white-color);
+    padding: 3.8rem 3rem 4.6rem;
+    width: 100%;
+    max-width: 37.3rem;
+
+    @media (width < $desktop) {
+        padding: 2.7rem 2rem 3.2rem;
+        max-width: 26rem;
+    }
+
+    @media ($tablet > width >= $phablet) {
+        max-width: 100%;
+    }
+}
+
+.contact__icon {
+    margin: 0 auto 1.7rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 2.4rem;
+    background-repeat: no-repeat;
+    background-color: var(--highlight-color);
+    width: 7rem;
+    height: 7rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 1.2rem;
+        background-size: 1.7rem;
+        width: 4.9rem;
+        height: 4.9rem;
+    }
+}
+
+.contact__icon_office {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyIDIwLjAwMDJWMTIuMTc0MUMyMi4wMDAxIDExLjYyOTcgMjEuODg5IDExLjA5MDkgMjEuNjczNSAxMC41OTA5QzIxLjQ1OCAxMC4wOTA5IDIxLjE0MjggOS42NDAwNyAyMC43NDcgOS4yNjYxNUwxMy4zNzQgMi4yOTgxNUMxMy4wMDI3IDEuOTQ3MDggMTIuNTExIDEuNzUxNDYgMTIgMS43NTE0NkMxMS40ODkgMS43NTE0NiAxMC45OTczIDEuOTQ3MDggMTAuNjI2IDIuMjk4MTVMMy4yNTMgOS4yNjYxNUMyLjg1NzIyIDkuNjQwMDcgMi41NDE5NSAxMC4wOTA5IDIuMzI2NSAxMC41OTA5QzIuMTExMDQgMTEuMDkwOSAxLjk5OTk0IDExLjYyOTcgMiAxMi4xNzQxVjIwLjAwMDJDMiAyMC41MzA2IDIuMjEwNzEgMjEuMDM5MyAyLjU4NTc5IDIxLjQxNDRDMi45NjA4NiAyMS43ODk0IDMuNDY5NTcgMjIuMDAwMiA0IDIyLjAwMDJIMjBDMjAuNTMwNCAyMi4wMDAyIDIxLjAzOTEgMjEuNzg5NCAyMS40MTQyIDIxLjQxNDRDMjEuNzg5MyAyMS4wMzkzIDIyIDIwLjUzMDYgMjIgMjAuMDAwMloiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=);
+}
+
+.contact__icon_email {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgNkMyIDUuNDY5NTcgMi4yMTA3MSA0Ljk2MDg2IDIuNTg1NzkgNC41ODU3OUMyLjk2MDg2IDQuMjEwNzEgMy40Njk1NyA0IDQgNEgyMEMyMC41MzA0IDQgMjEuMDM5MSA0LjIxMDcxIDIxLjQxNDIgNC41ODU3OUMyMS43ODkzIDQuOTYwODYgMjIgNS40Njk1NyAyMiA2VjE4QzIyIDE4LjUzMDQgMjEuNzg5MyAxOS4wMzkxIDIxLjQxNDIgMTkuNDE0MkMyMS4wMzkxIDE5Ljc4OTMgMjAuNTMwNCAyMCAyMCAyMEg0QzMuNDY5NTcgMjAgMi45NjA4NiAxOS43ODkzIDIuNTg1NzkgMTkuNDE0MkMyLjIxMDcxIDE5LjAzOTEgMiAxOC41MzA0IDIgMThWNloiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yIDhMOS41MDEgMTQuMDAxQzEwLjIxMDMgMTQuNTY4NSAxMS4wOTE2IDE0Ljg3NzcgMTIgMTQuODc3N0MxMi45MDg0IDE0Ljg3NzcgMTMuNzg5NyAxNC41Njg1IDE0LjQ5OSAxNC4wMDFMMjIgOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==);
+}
+
+.contact__icon_phone {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjU1NCA2LjI0MDAzTDcuMTcwOTkgMi4zMzUwM0M2Ljc4MDk5IDEuODg1MDMgNi4wNjU5OSAxLjg4NzAzIDUuNjEyOTkgMi4zNDEwM0wyLjgzMDk5IDUuMTI4MDNDMi4wMDI5OSA1Ljk1NzAzIDEuNzY1OTkgNy4xODgwMyAyLjI0NDk5IDguMTc1MDNDNS4xMDY2MSAxNC4xIDkuODg1MDMgMTguODg1MSAxNS44MDYgMjEuNzU1QzE2Ljc5MiAyMi4yMzQgMTguMDIyIDIxLjk5NyAxOC44NSAyMS4xNjhMMjEuNjU4IDE4LjM1NUMyMi4xMTMgMTcuOSAyMi4xMTQgMTcuMTgxIDIxLjY2IDE2Ljc5MUwxNy43NCAxMy40MjZDMTcuMzMgMTMuMDc0IDE2LjY5MyAxMy4xMiAxNi4yODIgMTMuNTMyTDE0LjkxOCAxNC44OThDMTQuODQ4MiAxNC45NzEyIDE0Ljc1NjIgMTUuMDE5NSAxNC42NTYzIDE1LjAzNTRDMTQuNTU2NCAxNS4wNTEzIDE0LjQ1NDEgMTUuMDMzOSAxNC4zNjUgMTQuOTg2QzEyLjEzNTQgMTMuNzAyMSAxMC4yODYgMTEuODUwMyA5LjAwNDk5IDkuNjE5MDNDOC45NTcwMiA5LjUyOTc4IDguOTM5NjQgOS40MjcyNiA4Ljk1NTU0IDkuMzI3MTlDOC45NzE0NCA5LjIyNzExIDkuMDE5NzIgOS4xMzUwMiA5LjA5Mjk5IDkuMDY1MDNMMTAuNDUzIDcuNzA0MDNDMTAuODY1IDcuMjkwMDMgMTAuOTEgNi42NTAwMyAxMC41NTQgNi4yMzkwM1Y2LjI0MDAzWiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==);
+}
+
+.contact__name {
+    display: block;
+    margin-bottom: 2.1rem;
+    color: var(--highlight-color);
+    font-weight: 700;
+    font-size: 2rem;
+
+    @media (width < $desktop) {
+        margin-bottom: 1.4rem;
+        font-size: 1.4rem;
+    }
+}
+
+.contact__link {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    color: var(--light-color);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.5%;
+
+    @media (width < $desktop) {
+        letter-spacing: 1.2%;
+    }
+
+    @include hover-active {
+        text-decoration: underline;
+    }
+}
+
+.contact__image-wrapper {
+    margin: 0 auto;
+    background-color: var(--pale-cyan-color);
+    aspect-ratio: 1440 / 547;
+    max-width: 144rem;
+
+    @media (width < $desktop) {
+        aspect-ratio: 1024 / 418;
+    }
+
+    @media (width < $phablet) {
+        aspect-ratio: 375 / 382;
+    }
+}
+
+.contact__image {
+    @extend %cover-media;
+}
+
+.contact__form {
+    transform: translateY(-12.9rem);
+    margin: 0 auto;
+    box-shadow: 0.7rem 0.8rem 5.4rem 0 #7c4ee412;
+    border-radius: var(--radius);
+    background-color: var(--white-color);
+    padding: 7.4rem 6.2rem 6.4rem;
+    width: calc(100% - 4.8rem);
+    max-width: 76.8rem;
+
+    @media (width < $desktop) {
+        transform: translateY(-9rem);
+        padding: 5.3rem 4.4rem 4.9rem;
+        max-width: 53.7rem;
+    }
+
+    @media (width < $tablet) {
+        transform: translateY(-5.9rem);
+        padding: 4.8rem 5.5rem;
+    }
+}
+
+.contact__field-set {
+    --field-set-column-gap: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.6rem var(--field-set-column-gap);
+    margin-bottom: 4.4rem;
+
+    @media (width < $desktop) {
+        --field-set-column-gap: 1.4rem;
+
+        row-gap: 1.8rem;
+        margin-bottom: 3rem;
+    }
+
+    @media (width < $tablet) {
+        gap: 2.3rem;
+    }
+}
+
+.contact__label {
+    width: calc(50% - var(--field-set-column-gap) / 2);
+
+    @media (width < $tablet) {
+        width: 100%;
+    }
+
+    &:last-child {
+        width: 100%;
+
+        @media (width < $tablet) {
+            padding-top: 1.3rem;
+        }
+    }
+
+    span {
+        display: block;
+        margin-bottom: 0.8rem;
+        width: fit-content;
+        font-weight: 600;
+        letter-spacing: 2%;
+
+        @media (width < $desktop) {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.contact__field,
+.contact__text-area {
+    display: block;
+    border: 0.1rem solid var(--light-color);
+    border-radius: 0.8rem;
+    padding: 1.4rem;
+    width: 100%;
+
+    @media (width < $desktop) {
+        border-radius: 0.6rem;
+        padding: 1rem;
+    }
+}
+
+.contact__text-area {
+    height: 17.3rem;
+
+    @media (width < $desktop) {
+        height: 12.2rem;
+    }
+
+    @media (width < $tablet) {
+        height: 16.4rem;
+    }
+}
+
+.contact__button {
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.4rem;
+    font-family: var(--raleway-font);
+
+    @media (width >= $desktop) {
+        padding: 1.8rem 3.5rem;
+        font-size: 1.5rem;
+    }
+}
