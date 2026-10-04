@@ -91,6 +91,11 @@ input {
     text-overflow: ellipsis;
 }
 
+textarea {
+    resize: none;
+    font-weight: 500;
+}
+
 ::placeholder {
     color: var(--light-color);
     font-weight: 400;
