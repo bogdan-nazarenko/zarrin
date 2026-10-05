@@ -80,4 +80,8 @@
 
 .footer__text {
     text-align: center;
+
+    @media (width < $desktop) {
+        word-spacing: 14%;
+    }
 }
