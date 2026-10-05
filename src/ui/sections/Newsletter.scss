@@ -152,10 +152,11 @@
 }
 
 .newsletter__text {
+    opacity: 0.5;
     margin: 0 auto;
     max-width: 54rem;
-    color: #bbbbbb;
-    line-height: 1.78;
+    color: var(--white-color);
+    line-height: 1.75;
     text-align: center;
 
     @media (width < $desktop) {
