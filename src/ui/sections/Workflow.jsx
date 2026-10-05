@@ -25,7 +25,7 @@ const Workflow = () => {
         <section className="workflow section">
             <div className="container">
                 <header className="workflow__header">
-                    <hgroup className="workflow__title-group">
+                    <div className="workflow__title-group">
                         <span className="workflow__superscription superscription">
                             How we work
                         </span>
@@ -33,7 +33,7 @@ const Workflow = () => {
                         <h2 className="workflow__title lg-title">
                             I will show you how our team works
                         </h2>
-                    </hgroup>
+                    </div>
 
                     <p className="workflow__text text">
                         Bring to the table win-win market strategies to ensure
