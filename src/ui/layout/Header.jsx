@@ -90,11 +90,19 @@ const Header = () => {
     function searchByKeys(event) {
         event.preventDefault();
 
-        if (!fieldRef.current.value) return;
+        fieldRef.current.value = fieldRef.current.value.trim();
+
+        if (!fieldRef.current.value) {
+            if (isMobile) setFieldVisible(false);
+
+            setClearButtonVisible(false);
+            return;
+        }
 
         const data = new FormData(event.currentTarget);
         const params = new URLSearchParams(data);
 
+        closeMenu();
         navigate(`/results?${params.toString()}`);
 
         fieldRef.current.focus();
