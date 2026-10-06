@@ -149,8 +149,8 @@ const Header = () => {
     return (
         <header
             className="header"
-            onClick={isMobile ? headerHandler : undefined}
             ref={headerRef}
+            onClick={isMobile ? headerHandler : undefined}
         >
             <div className="header__inner">
                 <div className="header__container container">
@@ -187,14 +187,14 @@ const Header = () => {
                                                         ? "page"
                                                         : undefined
                                                 }
-                                                onClick={
-                                                    isMobile
-                                                        ? closeMenu
-                                                        : undefined
-                                                }
                                                 ref={
                                                     index === 0
                                                         ? linkRef
+                                                        : undefined
+                                                }
+                                                onClick={
+                                                    isMobile
+                                                        ? closeMenu
                                                         : undefined
                                                 }
                                             >
@@ -230,8 +230,8 @@ const Header = () => {
                                         name="search"
                                         placeholder="Search"
                                         aria-label="Search"
-                                        onInput={fieldInputHandler}
                                         ref={fieldRef}
+                                        onInput={fieldInputHandler}
                                     />
 
                                     {isClearButtonVisible && (
