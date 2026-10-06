@@ -149,6 +149,10 @@
     @media (width < $tablet) {
         padding: 0.7rem 1.9rem;
     }
+
+    @media (width < $mobile) {
+        font-size: 1rem;
+    }
 }
 
 .newsletter__text {
