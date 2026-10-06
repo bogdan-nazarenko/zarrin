@@ -131,6 +131,10 @@
             letter-spacing: -4%;
         }
     }
+
+    @media (width < $mobile) {
+        padding: 1rem;
+    }
 }
 
 .newsletter__button {
