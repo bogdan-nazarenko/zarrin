@@ -154,13 +154,13 @@
 .newsletter__text {
     opacity: 0.5;
     margin: 0 auto;
-    max-width: 54rem;
+    max-width: 55rem;
     color: var(--white-color);
     line-height: 1.75;
     text-align: center;
 
     @media (width < $desktop) {
-        max-width: 39rem;
+        max-width: 40rem;
         line-height: 1.82;
         word-spacing: 11%;
     }
