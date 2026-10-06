@@ -123,6 +123,10 @@
 .header__search-form {
     display: flex;
     align-items: center;
+
+    @media (width < $tablet) {
+        width: 100%;
+    }
 }
 
 .header__field-wrapper {
@@ -144,6 +148,7 @@
 
     @media (width < $tablet) {
         margin-right: 0.5rem;
+        width: 100%;
     }
 }
 
@@ -159,7 +164,7 @@
 .header__clear-button {
     position: absolute;
     top: 50%;
-    right: 1.5rem;
+    right: 1rem;
     transform: translateY(-50%);
     border-radius: 50%;
     width: 2.5rem;
