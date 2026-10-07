@@ -246,7 +246,7 @@ const Header = () => {
                                     )}
                                 </div>
                                 <button
-                                    className={`header__search-button ${!isMobile && isFieldVisible ? "header__search-button_active" : ""}`.trim()}
+                                    className={`header__search-button ${isFieldVisible ? "header__search-button_active" : ""}`.trim()}
                                     type="submit"
                                     aria-label={searchButtonLabel()}
                                 ></button>
