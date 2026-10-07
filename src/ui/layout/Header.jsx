@@ -93,7 +93,10 @@ const Header = () => {
         fieldRef.current.value = fieldRef.current.value.trim();
 
         if (!fieldRef.current.value) {
-            if (isMobile) setFieldVisible(false);
+            if (document.activeElement !== fieldRef.current) {
+                setFieldVisible(!isFieldVisible);
+                return;
+            }
 
             setClearButtonVisible(false);
             return;
