@@ -85,6 +85,8 @@ const Header = () => {
         }
     }
 
+    const linkRef = useRef(null);
+    const fieldRef = useRef(null);
     const navigate = useNavigate();
 
     function searchByKeys(event) {
@@ -110,9 +112,6 @@ const Header = () => {
 
         fieldRef.current.focus();
     }
-
-    const linkRef = useRef(null);
-    const fieldRef = useRef(null);
 
     function setFocus(state, event, elRef) {
         if (
