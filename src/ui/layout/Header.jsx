@@ -151,12 +151,6 @@ const Header = () => {
         }
     }
 
-    function toggleFieldVisibility() {
-        if (fieldRef.current.value) return;
-
-        setFieldVisible(!isFieldVisible);
-    }
-
     return (
         <header
             className="header"
@@ -258,11 +252,6 @@ const Header = () => {
                                     className={`header__search-button ${!isMobile && isFieldVisible ? "header__search-button_active" : ""}`.trim()}
                                     type="submit"
                                     aria-label={searchButtonLabel()}
-                                    onClick={
-                                        !isMobile
-                                            ? toggleFieldVisibility
-                                            : undefined
-                                    }
                                 ></button>
                             </form>
 
