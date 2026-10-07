@@ -39,8 +39,6 @@ const Header = () => {
         isMobileRef.current = isMobile;
         isMenuOpenRef.current = isMenuOpen;
 
-        if (!isMobile && isMenuOpen) queueMicrotask(closeMenu);
-
         document.body.classList.toggle(
             "page-layout_non-scrollable",
             isMenuOpen
