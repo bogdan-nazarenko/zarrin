@@ -99,24 +99,24 @@
 
 .header__list {
     display: flex;
-    gap: 4.3rem;
+    gap: 4.7rem;
 
     @media (width < $desktop) {
-        gap: 3.1rem;
+        gap: 2.9rem;
     }
 }
 
 .header__link {
-    padding: 0.7rem;
+    padding: 0.6rem;
     font-weight: 500;
     @extend %link;
 
-    &[aria-current="page"] {
-        color: var(--highlight-color);
+    @media (width < $desktop) {
+        padding: 0.7rem;
     }
 
-    @media (width < $desktop) {
-        padding: 0.6rem;
+    &[aria-current="page"] {
+        color: var(--highlight-color);
     }
 }
 
