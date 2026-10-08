@@ -255,8 +255,20 @@ const Header = () => {
                                 </div>
                                 <button
                                     className={`header__search-button ${isFieldVisible ? "header__search-button_active" : ""}`.trim()}
-                                    type="submit"
+                                    type={
+                                        isMobile || isClearButtonVisible
+                                            ? "submit"
+                                            : "button"
+                                    }
                                     aria-label={searchButtonLabel()}
+                                    onClick={
+                                        isMobile || isClearButtonVisible
+                                            ? undefined
+                                            : () =>
+                                                  setFieldVisible(
+                                                      !isFieldVisible
+                                                  )
+                                    }
                                 ></button>
                             </form>
 
