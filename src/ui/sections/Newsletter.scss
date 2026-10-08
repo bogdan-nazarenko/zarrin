@@ -29,7 +29,6 @@
         }
 
         @media (width < $tablet) {
-            transform: scaleX(1.4);
             height: 12.3rem;
         }
     }
@@ -49,6 +48,7 @@
         @media (width < $tablet) {
             top: -8.7rem;
             left: -0.4rem;
+            transform: scaleX(1.4);
             width: 15rem;
         }
     }
@@ -66,8 +66,9 @@
         }
 
         @media (width < $tablet) {
-            right: 4.1rem;
+            right: 3.7rem;
             bottom: -9.9rem;
+            transform: scaleX(1.45);
             width: 17rem;
         }
     }
