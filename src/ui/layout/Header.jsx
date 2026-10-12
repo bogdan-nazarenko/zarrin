@@ -171,13 +171,6 @@ const Header = () => {
                     <nav
                         className={`header__nav ${isMenuOpen ? "header__nav_open" : ""}`.trim()}
                         id="page-menu"
-                        onTransitionEnd={
-                            isMobile
-                                ? (event) => {
-                                      setFocus(isMenuOpen, event, linkRef);
-                                  }
-                                : undefined
-                        }
                     >
                         <div className="header__nav-inner">
                             <ul className="header__list">
