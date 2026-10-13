@@ -64,7 +64,6 @@
     @media (width < $tablet) {
         display: grid;
         grid-template-rows: 0fr;
-        order: 1;
         visibility: hidden;
         transition-duration: var(--duration);
         transition-property: grid-template-rows, visibility;
