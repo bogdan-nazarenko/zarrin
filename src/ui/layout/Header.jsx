@@ -167,6 +167,50 @@ const Header = () => {
                         onClick={isMobile && isMenuOpen ? closeMenu : undefined}
                     />
 
+                    {isMobile && (
+                        <button
+                            className="header__menu-button"
+                            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                            aria-controls="page-menu"
+                            aria-expanded={isMenuOpen ? "true" : "false"}
+                            onClick={() => setMenuOpen(!isMenuOpen)}
+                        >
+                            <svg
+                                className="header__menu-icon"
+                                width="34"
+                                height="34"
+                                fill="none"
+                                viewBox="0 0 34 34"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m9 11h16"
+                                    strokeWidth="2.5"
+                                    strokeLinecap="round"
+                                />
+                                <path
+                                    d="m9 17h16"
+                                    strokeWidth="2.5"
+                                    strokeLinecap="round"
+                                />
+                                <path
+                                    d="m9 23h16"
+                                    strokeWidth="2.5"
+                                    strokeLinecap="round"
+                                />
+                                <circle
+                                    cx="17"
+                                    cy="17"
+                                    r="15.75"
+                                    fill="none"
+                                    strokeWidth="2.5"
+                                    strokeLinecap="round"
+                                />
+                            </svg>
+                        </button>
+                    )}
+
                     <nav
                         className={`header__nav ${isMenuOpen ? "header__nav_open" : ""}`.trim()}
                         id="page-menu"
@@ -271,50 +315,6 @@ const Header = () => {
                             </Link>
                         </div>
                     </nav>
-
-                    {isMobile && (
-                        <button
-                            className="header__menu-button"
-                            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                            aria-controls="page-menu"
-                            aria-expanded={isMenuOpen ? "true" : "false"}
-                            onClick={() => setMenuOpen(!isMenuOpen)}
-                        >
-                            <svg
-                                className="header__menu-icon"
-                                width="34"
-                                height="34"
-                                fill="none"
-                                viewBox="0 0 34 34"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="m9 11h16"
-                                    strokeWidth="2.5"
-                                    strokeLinecap="round"
-                                />
-                                <path
-                                    d="m9 17h16"
-                                    strokeWidth="2.5"
-                                    strokeLinecap="round"
-                                />
-                                <path
-                                    d="m9 23h16"
-                                    strokeWidth="2.5"
-                                    strokeLinecap="round"
-                                />
-                                <circle
-                                    cx="17"
-                                    cy="17"
-                                    r="15.75"
-                                    fill="none"
-                                    strokeWidth="2.5"
-                                    strokeLinecap="round"
-                                />
-                            </svg>
-                        </button>
-                    )}
                 </div>
             </div>
         </header>
