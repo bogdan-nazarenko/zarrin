@@ -94,7 +94,6 @@ const Header = () => {
         }
     }
 
-    const linkRef = useRef(null);
     const fieldRef = useRef(null);
     const navigate = useNavigate();
 
@@ -174,7 +173,7 @@ const Header = () => {
                     >
                         <div className="header__nav-inner">
                             <ul className="header__list">
-                                {headerLinks.map((link, index) => {
+                                {headerLinks.map((link) => {
                                     const { url, name } = link;
 
                                     return (
@@ -188,11 +187,6 @@ const Header = () => {
                                                 aria-current={
                                                     url === pathname
                                                         ? "page"
-                                                        : undefined
-                                                }
-                                                ref={
-                                                    index === 0
-                                                        ? linkRef
                                                         : undefined
                                                 }
                                                 onClick={
