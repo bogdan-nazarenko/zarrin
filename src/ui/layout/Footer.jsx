@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { useSelector } from "react-redux";
 import { navLinks } from "@data/links";
 import HomeLink from "@ui/components/HomeLink";
 import "./Footer.scss";
@@ -27,8 +28,12 @@ const footerSocialLinks = [
 ];
 
 const Footer = () => {
+    const isMenuOpen = useSelector((state) => {
+        return state.app.headerState.isMenuOpen;
+    });
+
     return (
-        <footer className="footer">
+        <footer className="footer" inert={isMenuOpen}>
             <div className="footer__top container">
                 <HomeLink />
 
