@@ -1,5 +1,6 @@
 import { useEffect, lazy, Suspense } from "react";
 import { useLocation, Routes, Route } from "react-router";
+import { useSelector } from "react-redux";
 import Header from "@ui/layout/Header";
 import Loading from "@ui/components/Loading";
 const Home = lazy(() => import("@ui/pages/Home"));
@@ -13,6 +14,10 @@ import Footer from "@ui/layout/Footer";
 
 const App = () => {
     const { pathname } = useLocation();
+
+    const isMenuOpen = useSelector((state) => {
+        return state.app.headerState.isMenuOpen;
+    });
 
     useEffect(() => {
         const windowHash = window.location.hash;
@@ -46,7 +51,7 @@ const App = () => {
     return (
         <>
             <Header />
-            <main className="main">
+            <main className="main" inert={isMenuOpen}>
                 <Suspense fallback={<Loading />}>
                     <Routes>
                         <Route path="/" element={<Home />} />
