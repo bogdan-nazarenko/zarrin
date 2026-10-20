@@ -34,16 +34,6 @@ const Header = () => {
     const isMenuOpenRef = useRef(isMenuOpen);
 
     useEffect(() => {
-        function handler() {
-            if (isMobileRef.current && isMenuOpenRef.current) closeMenu();
-        }
-
-        window.addEventListener("popstate", handler);
-
-        return () => window.removeEventListener("popstate", handler);
-    }, []);
-
-    useEffect(() => {
         isMobileRef.current = isMobile;
         isMenuOpenRef.current = isMenuOpen;
 
@@ -52,6 +42,16 @@ const Header = () => {
             isMenuOpen
         );
     }, [isMobile, isMenuOpen]);
+
+    useEffect(() => {
+        function handler() {
+            if (isMobileRef.current && isMenuOpenRef.current) closeMenu();
+        }
+
+        window.addEventListener("popstate", handler);
+
+        return () => window.removeEventListener("popstate", handler);
+    }, []);
 
     const wrapperRef = useRef(null);
     const headerRef = useRef(null);
