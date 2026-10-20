@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useLocation, useNavigate, Link } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
 import useMediaQuery from "@utils/responsive";
+import { setMenuOpen } from "@libs/redux";
 import { navLinks } from "@data/links";
 import HomeLink from "@ui/components/HomeLink";
 import "./Header.scss";
@@ -10,25 +12,18 @@ const headerLinks = navLinks.filter((link) => {
 });
 
 const Header = () => {
-    const [isMenuOpen, setMenuOpen] = useState(false);
     const [isFieldVisible, setFieldVisible] = useState(false);
     const [isClearButtonVisible, setClearButtonVisible] = useState(false);
     const { pathname } = useLocation();
     const isDesktop = useMediaQuery("width >= 1024px");
     const isMobile = useMediaQuery("width < 768px");
-    const [prevMobile, setPrevMobile] = useState(isMobile);
 
-    const closeMenu = () => setMenuOpen(false);
+    const isMenuOpen = useSelector((state) => {
+        return state.app.headerState.isMenuOpen;
+    });
+    const dispatch = useDispatch();
 
-    if (prevMobile !== isMobile) {
-        setPrevMobile(isMobile);
-
-        if (isMobile) {
-            if (!isClearButtonVisible) setFieldVisible(false);
-        } else {
-            closeMenu();
-        }
-    }
+    const closeMenu = () => dispatch(setMenuOpen(false));
 
     const isMobileRef = useRef(isMobile);
     const isMenuOpenRef = useRef(isMenuOpen);
@@ -44,14 +39,26 @@ const Header = () => {
     }, [isMobile, isMenuOpen]);
 
     useEffect(() => {
-        function handler() {
-            if (isMobileRef.current && isMenuOpenRef.current) closeMenu();
+        function windowHandler() {
+            if (isMobileRef.current && isMenuOpenRef.current) {
+                dispatch(setMenuOpen(false));
+            }
         }
 
-        window.addEventListener("popstate", handler);
+        const mobileMql = window.matchMedia("(width < 768px)");
 
-        return () => window.removeEventListener("popstate", handler);
-    }, []);
+        function mqlHandler() {
+            if (!mobileMql.matches) dispatch(setMenuOpen(false));
+        }
+
+        window.addEventListener("popstate", windowHandler);
+        mobileMql.addEventListener("change", mqlHandler);
+
+        return () => {
+            window.removeEventListener("popstate", windowHandler);
+            mobileMql.removeEventListener("change", mqlHandler);
+        };
+    }, [dispatch]);
 
     const wrapperRef = useRef(null);
     const headerRef = useRef(null);
@@ -162,7 +169,7 @@ const Header = () => {
                             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                             aria-controls="page-menu"
                             aria-expanded={isMenuOpen ? "true" : "false"}
-                            onClick={() => setMenuOpen(!isMenuOpen)}
+                            onClick={() => dispatch(setMenuOpen(!isMenuOpen))}
                         >
                             <svg
                                 className="header__menu-icon"
