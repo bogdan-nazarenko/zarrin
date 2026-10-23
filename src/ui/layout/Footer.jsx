@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="footer__top container">
                 <HomeLink />
 
-                <nav className="footer__nav">
+                <nav className="footer__nav" aria-label="Quick links">
                     <ul className="footer__list">
                         {navLinks.map((link) => {
                             const { url, name } = link;
