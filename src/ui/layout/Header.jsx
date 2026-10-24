@@ -245,6 +245,7 @@ const Header = () => {
 
                             <form
                                 className="header__search-form"
+                                role="search"
                                 onSubmit={searchByKeys}
                             >
                                 <div
