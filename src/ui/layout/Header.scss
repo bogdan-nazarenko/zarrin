@@ -60,10 +60,14 @@
 @media (width < $tablet) {
     .header__nav {
         display: grid;
+        position: absolute;
+        top: 100%;
+        left: 0;
         grid-template-rows: 0fr;
         visibility: hidden;
         transition-duration: var(--duration);
         transition-property: grid-template-rows, visibility;
+        background-color: var(--white-color);
         width: 100%;
     }
 
