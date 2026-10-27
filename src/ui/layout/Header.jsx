@@ -15,7 +15,6 @@ const Header = () => {
     const [isFieldVisible, setFieldVisible] = useState(false);
     const [isClearButtonVisible, setClearButtonVisible] = useState(false);
     const { pathname } = useLocation();
-    const isDesktop = useMediaQuery("width >= 1024px");
     const isMobile = useMediaQuery("width < 768px");
 
     const isMenuOpen = useSelector((state) => {
@@ -59,30 +58,6 @@ const Header = () => {
             mobileMql.removeEventListener("change", mqlHandler);
         };
     }, [dispatch]);
-
-    const wrapperRef = useRef(null);
-    const headerRef = useRef(null);
-    const alreadyCalled = useRef(false);
-
-    useEffect(() => {
-        if (alreadyCalled.current) return;
-
-        wrapperRef.current = headerRef.current.closest(".wrapper");
-        alreadyCalled.current = true;
-
-        const htmlFontSize = parseFloat(
-            getComputedStyle(document.documentElement).fontSize
-        );
-
-        requestAnimationFrame(() => {
-            wrapperRef.current.style.setProperty(
-                "--header-height",
-                `${headerRef.current.offsetHeight / htmlFontSize}rem`
-            );
-
-            alreadyCalled.current = false;
-        });
-    }, [isDesktop, isMobile]);
 
     function headerHandler(event) {
         if (event.target === event.currentTarget) {
@@ -154,7 +129,6 @@ const Header = () => {
     return (
         <header
             className="header"
-            ref={headerRef}
             onClick={isMobile ? headerHandler : undefined}
         >
             <div className="header__inner">
