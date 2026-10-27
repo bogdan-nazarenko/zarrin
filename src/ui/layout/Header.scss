@@ -1,12 +1,9 @@
 @use "@styles/abstracts" as *;
 
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
     z-index: 1000;
-    width: 100%;
-    overflow: hidden;
 
     @media (width < $tablet) {
         transition-delay: var(--duration);
