@@ -88,11 +88,12 @@
 
     @media (width < $tablet) {
         flex-direction: column;
+        padding: 0 2rem;
         overflow: hidden;
     }
 
     .header__nav_open & {
-        padding: 2rem 0 0.5rem;
+        padding-bottom: 2rem;
     }
 }
 
