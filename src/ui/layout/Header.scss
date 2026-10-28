@@ -38,7 +38,6 @@
 .header__inner {
     background-color: var(--white-color);
     padding-block: 1.9rem;
-    overflow: hidden;
 
     @media (width < $desktop) {
         padding-block: 1.2rem;
